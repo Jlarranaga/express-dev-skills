@@ -7,6 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="/">Home Page</a>
+
+    <h1>All Skills</h1>
+    <ul>
+        <% skills.forEach(function(s) { %>
+          <li>
+            <a href="/skills/<%= s.id %>"><%= s.skill %></a> <!-- setting id in hyperlink-->
+              - 
+            <%= s.fluent ? 'Yes, fluent!' : 'Nooo! Not fluent!' %>
+          </li>
+        <% }); %>
+      </ul>
     
 </body>
 </html>
